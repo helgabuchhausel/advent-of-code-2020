@@ -1,7 +1,6 @@
 import re
 
-split = " "
-split2 = "-"
+split, split2 = " ", "-"
 
 file = open('data.txt', 'r')
 lines = file.read().splitlines()
@@ -23,7 +22,7 @@ class Object:
 
     def checkCorporatePassword(self):
         if self.find() >= self.min and self.find() <= self.max:
-            return true
+            return True
     
     def createIndexes(self):
         self.index1 = self.min -1 
@@ -33,7 +32,7 @@ class Object:
         self.createIndexes()
         if self.password[self.index1] == self.letter or self.password[self.index2] == self.letter :
             if not(self.password[self.index1] == self.letter and self.password[self.index2] == self.letter)  :
-                return true
+                return True
     
     
 def partOne():
