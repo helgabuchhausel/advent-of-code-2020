@@ -6,6 +6,7 @@ file.close()
 tree = "#"
 slopes = [(1,1), (3,1), (5,1), (7,1), (1, 2)]
 
+# counting all the trees you would encounter for the slope right 3, down 1:
 def countTrees(slopeX, slopeY):
     x, trees = 0, 0
     for y in range(0, len(map), slopeY):
@@ -14,6 +15,7 @@ def countTrees(slopeX, slopeY):
         x = (x + slopeX) % w
     return trees
 
+# you multiply together the number of trees encountered on each of the listed slopes
 def productOfSlopes():
     product = 0
     for slope in slopes:
