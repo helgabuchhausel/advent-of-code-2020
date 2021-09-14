@@ -43,6 +43,7 @@ def partTwo():
                 sum += 1
     return sum
 
+
 print(partOne())
 print(partTwo())
 

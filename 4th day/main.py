@@ -21,19 +21,19 @@ eyr = "((eyr:[2]{1}[0]{1}[2]{1}[0-9]{1})|(eyr:[2]{1}[0]{1}[3]{1}[0]{1}))"
 #hgt (Height) - a number followed by either cm or in:
 #If cm, the number must be at least 150 and at most 193.
 #If in, the number must be at least 59 and at most 76.
-hgt = "((hgt:[1]{1}[5-8]{1}[0-9]{1}cm)|(hgt:[1]{1}[9]{1}[0-3]{1}cm)|(hgt:[5]{1}[9]{1}in)|(hgt:[6]{1}[0-9]{1}in)|(hgt:[7]{1}[0-6]{1}in))"
+hgt = "((hgt:[1]{1}[5-8]{1}[0-9]{1}(cm))|(hgt:[1]{1}[9]{1}[0-3]{1}(cm))|(hgt:[5]{1}[9]{1}(in))|(hgt:[6]{1}[0-9]{1}(in))|(hgt:[7]{1}[0-6]{1}(in)))"
 
 
 #hcl (Hair Color) - a # followed by exactly six characters 0-9 or a-f.
 #regex bug 
-hcl = "(hcl:#[0-9a-f]{6})"
+hcl = "(hcl:#([0-9a-f]){6})"
 
 #ecl (Eye Color) - exactly one of: amb blu brn gry grn hzl oth.
 ecl = "((ecl:amb)|(ecl:blu)|(ecl:brn)|(ecl:gry)|(ecl:grn)|(ecl:hzl)|(ecl:oth))"
 
 #pid (Passport ID) - a nine-digit number, including leading zeroes.
 #regex bug
-pid = "(pid:[0-9]{9})" 
+pid = "(pid:([0-9]){9})" 
 
 # fields check
 def allFieldsCheck(passport):
@@ -85,4 +85,5 @@ def strictPassportCheck():
 print(casualPassportCheck())
 print(strictPassportCheck())
 
+# one more. 159, every regex gives 159 
 #Your puzzle answer was 158.
